@@ -1,0 +1,241 @@
+body{
+    & *{
+        font-family: adelle-sans, sans-serif;
+        font-weight: 400;  
+    }
+    .wrapper{
+    height:100vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-x:hidden;
+    .anchor{
+        scroll-snap-align: start;
+            &#home{
+                background-color: $mid-green;
+                height:85vh;
+                width: 100vw;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                .container{
+                    width: 70%;
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    position:relative;
+                    & *{
+                        font-family: bitter, serif;
+                        color: $light-blue;
+                    }
+                    .decoration{
+                        width:100%;
+                        overflow: visible;
+                        position:absolute;
+                        font-size: 32vw;
+                        font-family: adelle-sans, sans-serif;
+                        opacity: 0.3;
+                        color: $light-blue;
+                        cursor:default;
+                        z-index:1;
+                    }
+                    article{
+                        z-index:2;
+                        display:flex;
+                        flex-direction: column;
+                        h1, b{
+                            font-size: 6rem;
+                        }
+                        h1{
+                            line-height: 8rem;
+
+                            b{
+                                font-weight:800;
+                                color:$dark-red;
+                                font-size: 10rem;
+                            }
+                        }
+                        
+                        h2{
+                            font-family: adelle-sans, sans-serif;
+                            font-size: 3rem;
+                            color: $light-yellow;
+                            b{
+                                @extend h2;
+                                font-weight: 700;
+                                color: $dark-red;
+                            }
+                        }
+                    }
+                }
+                
+
+            }
+            &#presentation{
+                background-color: $wood-green;
+                height:100vh;
+                width: 100vw;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                position:relative;
+                .decoration{
+                    width:100%;
+                    display:flex;
+                    justify-content: flex-start;
+                    margin-left: 10vw;
+                    align-items: center;
+                    overflow: visible;
+                    position:absolute;
+                    font-size: 35vw;
+                    font-family: adelle-sans, sans-serif;
+                    opacity: 0.3;
+                    color: $light-blue;
+                    cursor:default;
+                    z-index:1;
+                }
+                .container{
+                    z-index: 2;
+                    width:40%;
+                    height:60%;
+                    margin: 40% 0;
+                    margin-left:20vw;
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                    
+                    .title{
+                        width:100%;
+                        height:30%;
+                        display:flex;
+                        flex-direction: column;
+                        align-items: center;
+                        h2{
+                            b{
+                                
+                                color:$light-yellow;
+                            }
+                            font-size: 4vw;
+                            color:$light-blue;
+                        }
+                        h3{
+                            color: $light-blue;
+                           font-size:2vw; 
+                        }
+                    }
+                    div{
+                        height:80%;
+                        display:flex;
+                        width: 100%;
+                        align-items: center;
+                        p{
+                            color: $light-blue;
+                            font-size:2vh;
+                            font-family: bitter, serif;
+                            b{
+                                font-family: bitter, serif;
+                                color:$light-yellow;
+                                font-weight: bolder;
+                            }
+                        }
+                    }
+                }
+                
+            }
+            &#contact{
+                background-color: $mid-green;
+                height:100vh;
+                width: 100vw;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                position:relative;
+                .decoration{
+                    width:100%;
+                    display:flex;
+                    justify-content: flex-end;
+                    margin-right: 40vw;
+                    padding-bottom:10vh;
+                    align-items: center;
+                    overflow: visible;
+                    position:absolute;
+                    font-size: 35vw;
+                    font-family: adelle-sans, sans-serif;
+                    opacity: 0.3;
+                    color: $light-blue;
+                    cursor:default;
+                    z-index:1;
+                }
+                .container{
+                    width:40%;
+                    height:75%;
+                    margin-right:40vw;
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                    .title{
+                        width:100%;
+                        height:30%;
+                        display:flex;
+                        flex-direction: column;
+                        align-items: center;
+                        h2{
+                            b{
+                                
+                                color:$light-yellow;
+                            }
+                            font-size: 4vw;
+                            color:$light-blue;
+                        }
+                        h3{
+                            color: $light-blue;
+                           font-size:2vw; 
+                        }
+                    }
+                    div{
+                        height:100%;
+                        display:flex;
+                        width: 100%;
+                        justify-content: center;
+                        ul{
+                            width:70%;
+                            height:100%;  
+                            list-style-type: none;
+                            display:grid;
+                            grid-template-columns: 80%;;
+                            grid-template-rows: 1fr 1fr 1fr;
+                            justify-content: center;
+                            margin: 0;
+                            padding: 0;
+                            row-gap: 50px;
+                            li{
+                                display:flex;
+                                align-items: center;
+                                justify-content: center;
+                                
+                                a{
+                                    width:100%;
+                                    background-color: $wood-green;
+                                    padding: 10px;
+                                    border-radius: 10px;
+                                    text-decoration: none;
+                                    color: $light-blue;
+                                    font-size: 3vh;
+                                    border-bottom: 5px solid $light-yellow;
+                                    transition: all .3s;
+                                    &:hover{
+                                        color:$light-yellow;
+                                        border-color:$light-blue;
+                                    }
+                                }
+                            }
+                        }  
+                    }
+                }
+            }
+        }
+    }
+}

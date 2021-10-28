@@ -1,0 +1,53 @@
+.menu{
+    position: absolute;
+    right:30px;
+    top:35px;
+    cursor: pointer;
+    .nav{
+        display:none;
+    }
+    .icon{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        width:50px;
+        height: 25px;
+        &::before, &::after{
+            content: "";
+            background-color: $light-yellow;
+            height: 4px;
+            position:absolute;
+            transition: all .2s ease;
+        }
+        &::before{
+            top:3px;
+            width:100%;
+        }
+        &::after{
+            width:70%;
+            bottom:0;
+        }
+    }
+    &.active{
+        top:40px;
+        .nav{
+            display:inline-block;
+        }
+        .icon{
+            &::before, &::after{
+                background-color: $light-blue;
+                height:4px;
+            }
+            &::before{
+                transform: rotate(45deg);
+            }
+            &::after{
+                width:100%;
+                top:3px;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+}
