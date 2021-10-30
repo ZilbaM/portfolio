@@ -1,0 +1,151 @@
+body.projects{
+    & *{
+        font-family: adelle-sans, sans-serif;
+        font-weight: 400;  
+    }
+    overflow-x: hidden;
+    .wrapper{
+        background-color: $mid-green;
+        width:100vw;
+        min-height:100vh;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title{
+            width:80%;
+            height:30vh;
+            @include flex-center;
+            flex-direction: column;
+            @include xxl{
+                height: 15vh;
+                margin-top: 10vh;
+            }
+            
+            h2{
+                b{
+                    
+                    color:$light-yellow;
+                }
+                font-size: 4vw;
+                color:$light-blue;
+                @include xl{
+                    font-size: 6vw;
+                }
+            }
+            h3{
+                color: $light-blue;
+               font-size:2vw; 
+               @include xl {
+                   font-size: 4vw;
+               }
+            }
+        }
+        ul{
+            width: 55%;
+            display:flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px;    
+            color: $light-yellow;
+            @include xl{
+                width: 100%;
+            }
+            
+            .card{
+                position: relative;
+                height: 350px;
+                background: $wood-green;
+                display:flex;
+                width: 400px;
+                margin: 1vw;
+                @include l{
+                    transform: scale(0.75);
+                }
+                &, .img-box{
+                    border-radius: 8px;
+                }
+                .img-box{
+                    position: absolute;
+                    top:0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: $dark-red;
+                    z-index: 1;
+                    @include flex-center;
+                    overflow:hidden;
+                    transition: all 0.5s ease-in-out;
+                    &::before{
+                        content: attr(data-text);
+                        position:absolute;
+                        top: 0;
+                        left:0;
+                        width:100%;
+                        height:100%;
+                        text-align: center;
+                        font-size:6em;
+                        color: $light-yellow;
+                        opacity: 0.1;
+                        font-weight: 700;
+                        transition: all .5s ease-in-out;
+                    }
+                }
+                &:hover .img-box{
+                    width: 50%;
+                    height: 50%;
+                    transition: all 0.5s ease-in-out;
+                    top: calc(25vh/3);
+                    left: -25%;
+
+                    &::before{
+                        font-size: 4em;
+                        
+                    }
+                }
+                .content{
+                    position:absolute;
+                    right:0;
+                    width: 65%;
+                    height:100%;
+                    padding: 20px;
+                    @include flex-center;
+                    
+                    div{
+                        height: 70%;
+                        display:flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        @include s{
+                            height: 100%;
+                        }
+                    h3{
+                        font-size: 3em;
+                        font-weight: 700;
+                        color: $light-blue;
+                        @include s{
+                            font-size: 2em;
+                        }
+                    }
+                    p{
+                        font-size: 1.3em;
+                    }
+                    a{
+                        text-decoration: none;
+                        font-size: 2em;
+                        color: $light-blue;
+                        padding: 5px;
+                        background-color: $dark-red;
+                        text-align: center;
+                        transition: all .5s ease-in-out;
+                        &:hover{
+                            background-color: $light-yellow;
+                            color: $dark-red;
+                        }
+                    }
+                }
+                }
+                }
+            }
+        }
+    }

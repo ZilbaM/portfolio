@@ -1,7 +1,10 @@
-body{
+body.index{
     & *{
         font-family: adelle-sans, sans-serif;
         font-weight: 400;  
+    }
+    i{
+        font-family: "Font Awesome 5 Brands";
     }
     .wrapper{
     height:100vh;
@@ -15,30 +18,22 @@ body{
                 background-color: $mid-green;
                 height:85vh;
                 width: 100vw;
-                display:flex;
-                align-items: center;
-                justify-content: center;
+                @include flex-center;
+                @include xl{
+                    height:100vh;
+                }
                 .container{
                     width: 70%;
-                    display:flex;
+                    @include flex-center;
                     flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
                     position:relative;
                     & *{
                         font-family: bitter, serif;
                         color: $light-blue;
                     }
                     .decoration{
-                        width:100%;
-                        overflow: visible;
-                        position:absolute;
                         font-size: 32vw;
-                        font-family: adelle-sans, sans-serif;
-                        opacity: 0.3;
-                        color: $light-blue;
-                        cursor:default;
-                        z-index:1;
+                        @include deco;
                     }
                     article{
                         z-index:2;
@@ -49,11 +44,28 @@ body{
                         }
                         h1{
                             line-height: 8rem;
-
+                            @include xxl{
+                                font-size: 5rem;
+                            }
+                            @include xl{
+                                font-size: 4rem;
+                            }
+                            @include l{
+                                font-size: 3rem;
+                            }
                             b{
                                 font-weight:800;
                                 color:$dark-red;
                                 font-size: 10rem;
+                                @include xxl{
+                                    font-size: 9rem;
+                                }
+                                @include xl{
+                                    font-size: 8rem;
+                                }
+                                @include l{
+                                    font-size: 6rem;
+                                }
                             }
                         }
                         
@@ -66,6 +78,12 @@ body{
                                 font-weight: 700;
                                 color: $light-blue;
                             }
+                            @include xxl{
+                                font-size: 2rem;
+                            }
+                            @include xl{
+                                font-size: 1.7rem;
+                            }
                         }
                     }
                 }
@@ -76,53 +94,74 @@ body{
                 background-color: $wood-green;
                 height:100vh;
                 width: 100vw;
-                display:flex;
-                justify-content: center;
-                align-items: center;
+                @include flex-center;
                 position:relative;
                 .decoration{
-                    width:100%;
+                    @include deco;
                     display:flex;
                     justify-content: flex-start;
                     margin-left: 10vw;
                     align-items: center;
-                    overflow: visible;
-                    position:absolute;
                     font-size: 35vw;
-                    font-family: adelle-sans, sans-serif;
-                    opacity: 0.3;
-                    color: $light-blue;
-                    cursor:default;
-                    z-index:1;
+                    @include xxl{
+                        font-size: 25vw;
+                    }
                 }
                 .container{
                     z-index: 2;
                     width:40%;
-                    height:60%;
+                    height:70%;
                     margin: 40% 0;
                     margin-left:20vw;
                     display:flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: space-around;
-                    
+                    @include xxl{
+                        width: 60%;
+                    }
+                    @include l{
+                        margin: 0;
+                        width: 80%;
+                    }
                     .title{
                         width:100%;
                         height:30%;
                         display:flex;
                         flex-direction: column;
                         align-items: center;
+                        margin-bottom: 5%;
+                        @include xxl{
+                            margin-bottom: 10%;
+                            
+                        }
+                        @include l{
+                            height: auto;
+                        }
                         h2{
                             b{
-                                
                                 color:$light-yellow;
                             }
                             font-size: 4vw;
                             color:$light-blue;
+                            @include xxl{
+                                font-size: 6vw;
+                            }
+                            @include l{
+                                font-size: 8vw;
+                            }
+                        
                         }
                         h3{
                             color: $light-blue;
                            font-size:2vw; 
+                           @include xxl{
+                            font-size: 3vw;
+                        }   
+                        @include l{
+                            font-size: 5vw;    
+                        }
+
                         }
                     }
                     div{
@@ -134,11 +173,18 @@ body{
                             color: $light-blue;
                             font-size:2vh;
                             font-family: bitter, serif;
+                            @include s{
+                                font-size: 1.75vh;
+                            }
                             b{
                                 font-family: bitter, serif;
                                 color:$light-yellow;
                                 font-weight: bolder;
+                                @include s {
+                                    font-size: 1.75vh;
+                                }
                             }
+
                         }
                     }
                 }
@@ -148,25 +194,16 @@ body{
                 background-color: $mid-green;
                 height:100vh;
                 width: 100vw;
-                display:flex;
-                justify-content: center;
-                align-items: center;
+                @include flex-center;
                 position:relative;
                 .decoration{
-                    width:100%;
+                    @include deco;
                     display:flex;
                     justify-content: flex-end;
                     margin-right: 40vw;
                     padding-bottom:10vh;
                     align-items: center;
-                    overflow: visible;
-                    position:absolute;
                     font-size: 35vw;
-                    font-family: adelle-sans, sans-serif;
-                    opacity: 0.3;
-                    color: $light-blue;
-                    cursor:default;
-                    z-index:1;
                 }
                 .container{
                     width:40%;
@@ -177,12 +214,27 @@ body{
                     align-items: center;
                     justify-content: space-around;
                     z-index: 2;
+                    @include xxl{
+                        width: 60%;
+                        margin-right: 20vw;
+                    }
+                    @include l{
+                        margin: 0;
+                        width: 80%;
+                    }
+                    @include s{
+                        width: 90%;
+                    }
                     .title{
                         width:100%;
                         height:30%;
                         display:flex;
                         flex-direction: column;
                         align-items: center;
+                        @include xxl{
+                            height: auto;
+                            
+                        }
                         h2{
                             b{
                                 
@@ -190,10 +242,23 @@ body{
                             }
                             font-size: 4vw;
                             color:$light-blue;
+                            @include xxl{
+                                font-size: 6vw;
+                            }
+                            @include l{
+                                font-size: 8vw;
+                            }
                         }
                         h3{
                             color: $light-blue;
                            font-size:2vw; 
+                           @include xxl{
+                            font-size: 4vw;
+                        }
+                            @include l{
+                            font-size: 6vw;
+                        }
+                            
                         }
                     }
                     div{
@@ -213,10 +278,7 @@ body{
                             padding: 0;
                             row-gap: 50px;
                             li{
-                                display:flex;
-                                align-items: center;
-                                justify-content: center;
-                                
+                                @include flex-center;
                                 a{
                                     width:100%;
                                     background-color: $wood-green;
@@ -224,9 +286,15 @@ body{
                                     border-radius: 10px;
                                     text-decoration: none;
                                     color: $light-blue;
-                                    font-size: 3vh;
+                                    font-size: 2vw;
                                     border-bottom: 5px solid $light-yellow;
                                     transition: all .3s;
+                                    @include xl {
+                                        font-size: 3vw;
+                                    }
+                                    @include l{
+                                        font-size: 4vw;
+                                    }
                                     &:hover{
                                         color:$light-yellow;
                                         border-color:$light-blue;

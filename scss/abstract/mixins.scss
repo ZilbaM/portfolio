@@ -1,0 +1,38 @@
+@mixin xxl{
+    @media screen and (max-width: 990px){
+        @content;
+    }
+}
+@mixin xl {
+    @media screen and (max-width: 800px){
+        @content;
+    }
+}
+@mixin l {
+    @media screen and (max-width: 650px){
+        @content;
+    }
+}
+@mixin s{
+    @media screen and (max-width: 450px){
+        @content;
+    }
+}
+@mixin deco {
+    overflow: visible;
+    position:absolute;
+    font-family: adelle-sans, sans-serif;
+    opacity: 0.3;
+    cursor:default;
+    z-index:1;
+    color: $light-blue;
+    width:100%;
+    @include l{
+        display:none;
+    }
+}
+@mixin flex-center{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

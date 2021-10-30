@@ -31,5 +31,7 @@
         
         transform-origin: right;
     }
-    
+    @include s{
+        display:none;
+    }
 }
