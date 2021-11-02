@@ -1,0 +1,167 @@
+body.skills{
+    overflow-x: hidden;
+    & *{
+        font-family: adelle-sans, sans-serif;
+        font-weight: 400;  
+    }
+    .fab{
+        font-family: "Font Awesome 5 Brands";
+        font-size: 7em;
+        color: $light-blue;
+        opacity: 0.9;
+    }
+    .fas{
+        font-family : "Font Awesome 5 Free";
+        font-size: 7em;
+        color: $light-blue;
+        opacity: 0.9;
+        font-weight: 900;
+    }
+    .wrapper{
+        background-color: $mid-green;
+        width:100vw;
+        min-height:100vh;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title{
+            width:80%;
+            height:30vh;
+            @include flex-center;
+            flex-direction: column;
+            h2{
+                b{
+                    
+                    color:$light-yellow;
+                }
+                font-size: 4em;
+                color:$light-blue;
+                @include xl{
+                    font-size: 5em;
+                }
+            }
+            h3{
+                color: $light-blue;
+               font-size:2em; 
+               
+            }
+        }
+    }
+    .container{
+        width: 80%;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        margin-bottom: 100px;
+        @include xxl{
+            grid-template-columns: 2fr 2fr;
+            grid-row-gap: 50px;
+            width:90%;
+        }
+        @include s{
+            grid-template-columns: 4fr;
+        }
+        .card {
+            &::before{
+                content: "";
+                height:5em;
+                width: 3px;
+                background-color:$light-yellow;
+                position:absolute;
+                left:0;
+                top:2.5em;
+                z-index:5;
+            }
+            @include s{
+                &::after{
+                    content: "";
+                    position: absolute;
+                    height:3px;
+                    width: 50%;
+                    background-color: $light-yellow;
+                    bottom:-25px;
+                    left: 25%;
+                }
+                &:last-of-type::after{
+                    display:none;
+                }
+            }
+            position:relative;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            height:10em;
+
+            &.title{
+                &::before{
+                    display:none;
+                }
+                &::after{
+                    display:none;
+                }
+                justify-content: flex-start;
+                align-items: flex-start;
+                grid-column: 1/5;
+                width: 100%;
+                height:7em;
+                text-transform: uppercase;
+                @include xxl{
+                    grid-column: 1/3;
+                }
+                @include s{
+                    grid-column: 1/2;
+                }
+                h3{
+                    color: $light-yellow;
+                    width:40%;
+                    border-bottom: 4px solid $light-blue;
+                    border-radius: 4px;
+                    @include xxl{
+                        width:60%;
+                    }
+                    @include l{
+                        width: 80%;
+                        font-size: 2.5em;
+                    }
+                    @include s{
+                        width: 100%;
+                        font-size: 2em;
+                    }
+                } 
+            }
+            p{
+                text-transform: uppercase;
+                font-weight: bolder;
+                color: $light-yellow;
+                font-size: 2em;
+                text-align: center;
+                @include s{
+                    font-size: 1.75em;
+                }
+                
+            }
+            
+            &:nth-of-type(2){
+                &::before{
+                    display:none;
+                }
+            }
+            @include xxl{
+                &:nth-of-type(4)::before{
+                    display:none;
+                }
+
+            }
+            @include s{
+                &:nth-of-type(3)::before, &:nth-of-type(5)::before{
+                    display:none;
+                
+                }
+
+            }
+        }
+    }
+    
+}

@@ -841,4 +841,301 @@ body.projects .wrapper ul .card .content div a:hover {
   color: #1A0002;
 }
 
+body.skills {
+  overflow-x: hidden;
+}
+body.skills * {
+  font-family: adelle-sans, sans-serif;
+  font-weight: 400;
+}
+body.skills .fab {
+  font-family: "Font Awesome 5 Brands";
+  font-size: 7em;
+  color: #E5FCFF;
+  opacity: 0.9;
+}
+body.skills .fas {
+  font-family: "Font Awesome 5 Free";
+  font-size: 7em;
+  color: #E5FCFF;
+  opacity: 0.9;
+  font-weight: 900;
+}
+body.skills .wrapper {
+  background-color: #00ADAD;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body.skills .wrapper .title {
+  width: 80%;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body.skills .wrapper .title h2, body.skills body.index .wrapper .title .anchor#home .container article h2 b, body.index body.skills .wrapper .title .anchor#home .container article h2 b, body.skills body.index .wrapper .anchor#home .container article h2 .title b, body.index body.skills .wrapper .anchor#home .container article h2 .title b {
+  font-size: 4em;
+  color: #E5FCFF;
+}
+body.skills .wrapper .title h2 b, body.skills body.index .wrapper .title .anchor#home .container article h2 b b, body.index body.skills .wrapper .title .anchor#home .container article h2 b b, body.skills body.index .wrapper .anchor#home .container article h2 .title b b, body.index body.skills .wrapper .anchor#home .container article h2 .title b b {
+  color: #EEE8A9;
+}
+@media screen and (max-width: 800px) {
+  body.skills .wrapper .title h2, body.skills body.index .wrapper .title .anchor#home .container article h2 b, body.index body.skills .wrapper .title .anchor#home .container article h2 b, body.skills body.index .wrapper .anchor#home .container article h2 .title b, body.index body.skills .wrapper .anchor#home .container article h2 .title b {
+    font-size: 5em;
+  }
+}
+body.skills .wrapper .title h3 {
+  color: #E5FCFF;
+  font-size: 2em;
+}
+body.skills .container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 990px) {
+  body.skills .container {
+    grid-template-columns: 2fr 2fr;
+    grid-row-gap: 50px;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 450px) {
+  body.skills .container {
+    grid-template-columns: 4fr;
+  }
+}
+body.skills .container .card {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 10em;
+}
+body.skills .container .card::before {
+  content: "";
+  height: 5em;
+  width: 3px;
+  background-color: #EEE8A9;
+  position: absolute;
+  left: 0;
+  top: 2.5em;
+  z-index: 5;
+}
+@media screen and (max-width: 450px) {
+  body.skills .container .card::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 50%;
+    background-color: #EEE8A9;
+    bottom: -25px;
+    left: 25%;
+  }
+  body.skills .container .card:last-of-type::after {
+    display: none;
+  }
+}
+body.skills .container .card.title {
+  justify-content: flex-start;
+  align-items: flex-start;
+  grid-column: 1/5;
+  width: 100%;
+  height: 7em;
+  text-transform: uppercase;
+}
+body.skills .container .card.title::before {
+  display: none;
+}
+body.skills .container .card.title::after {
+  display: none;
+}
+@media screen and (max-width: 990px) {
+  body.skills .container .card.title {
+    grid-column: 1/3;
+  }
+}
+@media screen and (max-width: 450px) {
+  body.skills .container .card.title {
+    grid-column: 1/2;
+  }
+}
+body.skills .container .card.title h3 {
+  color: #EEE8A9;
+  width: 40%;
+  border-bottom: 4px solid #E5FCFF;
+  border-radius: 4px;
+}
+@media screen and (max-width: 990px) {
+  body.skills .container .card.title h3 {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 650px) {
+  body.skills .container .card.title h3 {
+    width: 80%;
+    font-size: 2.5em;
+  }
+}
+@media screen and (max-width: 450px) {
+  body.skills .container .card.title h3 {
+    width: 100%;
+    font-size: 2em;
+  }
+}
+body.skills .container .card p {
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: #EEE8A9;
+  font-size: 2em;
+  text-align: center;
+}
+@media screen and (max-width: 450px) {
+  body.skills .container .card p {
+    font-size: 1.75em;
+  }
+}
+body.skills .container .card:nth-of-type(2)::before {
+  display: none;
+}
+@media screen and (max-width: 990px) {
+  body.skills .container .card:nth-of-type(4)::before {
+    display: none;
+  }
+}
+@media screen and (max-width: 450px) {
+  body.skills .container .card:nth-of-type(3)::before, body.skills .container .card:nth-of-type(5)::before {
+    display: none;
+  }
+}
+
+body.proj-template {
+  overflow-x: hidden;
+}
+body.proj-template * {
+  font-family: adelle-sans, sans-serif;
+  font-weight: 400;
+}
+body.proj-template .wrapper {
+  min-height: 100vh;
+  width: 100vw;
+  background: #00ADAD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body.proj-template .wrapper .grid {
+  margin-top: 10vh;
+  display: grid;
+  height: 90%;
+  width: 90%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+@media screen and (max-width: 990px) {
+  body.proj-template .wrapper .grid {
+    grid-template-columns: 2fr;
+  }
+}
+body.proj-template .wrapper .grid-item:first-of-type {
+  display: flex;
+  flex-direction: column;
+  color: #E5FCFF;
+}
+body.proj-template .wrapper .grid-item:first-of-type h1 {
+  font-size: 5em;
+  font-weight: bolder;
+  border-bottom: 6px solid #E5FCFF;
+  width: fit-content;
+  line-height: 90%;
+}
+@media screen and (max-width: 650px) {
+  body.proj-template .wrapper .grid-item:first-of-type h1 {
+    font-size: 3.5em;
+  }
+}
+@media screen and (max-width: 450px) {
+  body.proj-template .wrapper .grid-item:first-of-type h1 {
+    font-size: 3em;
+  }
+}
+body.proj-template .wrapper .grid-item:first-of-type .tag {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+  padding: 0;
+}
+body.proj-template .wrapper .grid-item:first-of-type .tag-item {
+  font-size: 1.5em;
+  padding: 0 20px;
+  margin: 0 20px;
+  border: 3px solid #E5FCFF;
+  align-items: center;
+  border-radius: 25px;
+  vertical-align: center;
+}
+@media screen and (max-width: 650px) {
+  body.proj-template .wrapper .grid-item:first-of-type .tag-item {
+    font-size: 1.25em;
+    padding: 0 10px;
+    border-width: 2px;
+    border-radius: 15px;
+  }
+}
+@media screen and (max-width: 450px) {
+  body.proj-template .wrapper .grid-item:first-of-type .tag-item {
+    font-size: 1em;
+  }
+}
+body.proj-template .wrapper .grid-item:first-of-type .tag .php {
+  color: #4663e4;
+  border-color: #4663e4;
+}
+body.proj-template .wrapper .grid-item:first-of-type .tag .back {
+  color: #65FF9E;
+  border-color: #65FF9E;
+}
+body.proj-template .wrapper .grid-item:first-of-type .tag .full {
+  color: #fb7979;
+  border-color: #fb7979;
+}
+body.proj-template .wrapper .grid-item:first-of-type .tag .type {
+  color: #E7984F;
+  border-color: #E7984F;
+}
+body.proj-template .wrapper .grid-item:first-of-type h2, body.proj-template body.index .wrapper .grid-item:first-of-type .anchor#home .container article h2 b, body.index body.proj-template .wrapper .grid-item:first-of-type .anchor#home .container article h2 b, body.proj-template body.index .wrapper .anchor#home .container article h2 .grid-item:first-of-type b, body.index body.proj-template .wrapper .anchor#home .container article h2 .grid-item:first-of-type b {
+  color: #EEE8A9;
+  text-decoration: underline;
+  font-size: 2em;
+  margin: 20px;
+}
+body.proj-template .wrapper .grid-item:first-of-type p {
+  font-size: 1.25em;
+  font-family: bitter, serif;
+  font-weight: 400;
+}
+body.proj-template .wrapper .grid-item:last-of-type {
+  display: grid;
+  place-items: center;
+}
+body.proj-template .wrapper .grid-item:last-of-type * {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+@media screen and (max-width: 650px) {
+  body.proj-template .wrapper .grid-item:last-of-type {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

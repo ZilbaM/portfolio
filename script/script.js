@@ -41,6 +41,7 @@ if (window.location.pathname == "/index.html") {
         });
 }
 else{
+    
     document.querySelector('.nav-item.active').parentElement.classList.add('active');
 }
 

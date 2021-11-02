@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/shn0sbn.css">
+    <!-- Font file link -->
+
+    <title>Schedule - Basile MAILLE</title>
+</head>
+<body class="proj-template">
+    <a href="index.html" class="logo">
+        <p class="first">Basile.<b>M</b></p>
+    </a>
+    <div id="menu" class="menu">
+        <div class="menu-button"><div id="menu-icon" class="icon"></div></div>
+        <div class="nav">
+            <ul>
+                <li>
+                    <a class="nav-item" href="../index.html" id="home-link">Home</a>
+                </li>
+                <li>
+                    <a class="nav-item active" href="../projects.html">Projects</a>
+                </li>
+                <li>
+                    <a class="nav-item" href="../skills.html">Skills</a>
+                </li>
+                <li>
+                    <a class="nav-item" href="../index.html#contact" id="contact-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrapper">
+        <section class="grid">
+            <article class="grid-item">
+                <h1>Schedule</h1>
+                <ul class="tag">
+                    <li class="tag-item php">PHP</li>
+                    <li class="tag-item back">Backend</li>
+                    <li class="tag-item type">Data Parsing</li>
+                </ul>
+                <h2>Overview</h2>
+                <p>To improve in PHP, I decided to make my own schedule, by extracting my timetable from the intranet of my school, then sort the useful data and parse it on my page. The hard part was documenting on the data sorting, and adapting the different existing methods to my project. The design page wasn't something I cared about, so I made a simple neumorphic design for the different event of my schedule. Using my experience, i am currently working on integrating this concept to a chrome plugin, to access my schedule anytime and send notifications.
+                </p>
+                <h2>Technical process</h2>
+                <p>The extracting of the data was done through a RSS data feed already in place on the intranet of my school. I used the link laying in the intranet's code source to load the data, which was in the .ics format. Then, I used Regular Expressions (Regex) to cut through the useless data and extract the element i needed in an array. The parsing was basic loops and HTML.</p>
+            </article>
+            <article class="grid-item">
+                <img src="../images/calendar.jpg" alt="calendar web site preview">
+            </article>
+        </section>
+    </div>
+    <script src="../script/script.js"></script>
+</body>
+</html>
