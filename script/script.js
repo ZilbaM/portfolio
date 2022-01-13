@@ -1,6 +1,5 @@
 //MENU BURGER 
-if (window.location.pathname == "") {
-    
+if ((window.location.pathname == "/") || (window.location.pathname=="/index.html")) {
     document.getElementById('contact-link').addEventListener('click', function () {
         menu_toggle();
         document.getElementById('home-link').classList.remove('active');
