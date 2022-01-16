@@ -95,7 +95,6 @@ body.projects{
                 &:hover .img-box{
                     width: 50%;
                     height: 50%;
-                    transition: all 0.5s ease-in-out;
                     top: calc(25vh/3);
                     left: -25%;
 
@@ -145,7 +144,8 @@ body.projects{
                         text-decoration: none;
                         font-size: 2em;
                         color: $light-blue;
-                        padding: 5px;
+                        padding: 0.5rem 1rem;
+                        width: fit-content;
                         background-color: $wood-green;
                         text-align: center;
                         transition: all .5s ease-in-out;

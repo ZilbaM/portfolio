@@ -23,7 +23,7 @@ body.proj-template{
                 &:first-of-type{
                     display:flex;
                     flex-direction: column;
-                    color: $light-blue;
+                    color: $dark-red;
                     h1{
                         font-size: 5em;
                         font-weight: bolder;
@@ -62,19 +62,19 @@ body.proj-template{
                             }
                         }
                         .php{
-                            color: #4663e4;
+                            color: $dark-red;
                             border-color: #4663e4;
                         }
                         .back{
-                            color: #65FF9E;
+                            color: $dark-red;
                             border-color: #65FF9E;
                         }
                         .full{
-                            color: rgb(251, 121, 121);
+                            color: $dark-red;
                             border-color: rgb(251, 121, 121);
                         }
                         .type{
-                            color: #E7984F;
+                            color: $dark-red;
                             border-color: #E7984F;
                         }
                     }
@@ -95,8 +95,7 @@ body.proj-template{
                     place-items: center;
                     *{
                         width: 80%;
-                        height: 80%;
-                        object-fit: cover;
+                        
                     }
                     @include l{
                         display:none;

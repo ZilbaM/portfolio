@@ -397,7 +397,7 @@ body.index .wrapper .anchor#home .container article h2 b {
   }
 }
 body.index .wrapper .anchor#presentation {
-  background-color: #A8678A;
+  background-color: #141414;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -787,7 +787,6 @@ body.projects .wrapper ul .card .img-box::before {
 body.projects .wrapper ul .card:hover .img-box {
   width: 50%;
   height: 50%;
-  transition: all 0.5s ease-in-out;
   top: 8.3333333333vh;
   left: -25%;
 }
@@ -842,7 +841,8 @@ body.projects .wrapper ul .card .content div a {
   text-decoration: none;
   font-size: 2em;
   color: #E2F4FF;
-  padding: 5px;
+  padding: 0.5rem 1rem;
+  width: fit-content;
   background-color: #A8678A;
   text-align: center;
   transition: all 0.5s ease-in-out;
@@ -1060,7 +1060,7 @@ body.proj-template .wrapper .grid {
 body.proj-template .wrapper .grid-item:first-of-type {
   display: flex;
   flex-direction: column;
-  color: #E2F4FF;
+  color: #141414;
 }
 body.proj-template .wrapper .grid-item:first-of-type h1 {
   font-size: 5em;
@@ -1109,19 +1109,19 @@ body.proj-template .wrapper .grid-item:first-of-type .tag-item {
   }
 }
 body.proj-template .wrapper .grid-item:first-of-type .tag .php {
-  color: #4663e4;
+  color: #141414;
   border-color: #4663e4;
 }
 body.proj-template .wrapper .grid-item:first-of-type .tag .back {
-  color: #65FF9E;
+  color: #141414;
   border-color: #65FF9E;
 }
 body.proj-template .wrapper .grid-item:first-of-type .tag .full {
-  color: #fb7979;
+  color: #141414;
   border-color: #fb7979;
 }
 body.proj-template .wrapper .grid-item:first-of-type .tag .type {
-  color: #E7984F;
+  color: #141414;
   border-color: #E7984F;
 }
 body.proj-template .wrapper .grid-item:first-of-type h2, body.proj-template body.index .wrapper .grid-item:first-of-type .anchor#home .container article h2 b, body.index body.proj-template .wrapper .grid-item:first-of-type .anchor#home .container article h2 b, body.proj-template body.index .wrapper .anchor#home .container article h2 .grid-item:first-of-type b, body.index body.proj-template .wrapper .anchor#home .container article h2 .grid-item:first-of-type b {
@@ -1141,8 +1141,6 @@ body.proj-template .wrapper .grid-item:last-of-type {
 }
 body.proj-template .wrapper .grid-item:last-of-type * {
   width: 80%;
-  height: 80%;
-  object-fit: cover;
 }
 @media screen and (max-width: 650px) {
   body.proj-template .wrapper .grid-item:last-of-type {
