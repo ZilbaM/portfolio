@@ -854,6 +854,7 @@ body.projects .wrapper ul .card .content div a:hover {
 }
 
 body.skills {
+  background-color: #71ACD1;
   overflow-x: hidden;
 }
 body.skills * {
@@ -874,23 +875,27 @@ body.skills .fas {
   font-weight: 900;
 }
 body.skills .wrapper {
-  background-color: #71ACD1;
-  width: 100vw;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 100%;
+  padding: 1rem 3rem;
 }
 body.skills .wrapper .title {
-  width: 80%;
-  height: 30vh;
+  width: 100%;
+  border-bottom: 5px solid #E2F4FF;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+@media screen and (max-width: 990px) {
+  body.skills .wrapper .title {
+    height: 15vh;
+    margin-top: 10vh;
+  }
+}
 body.skills .wrapper .title h2, body.skills body.index .wrapper .title .anchor#home .container article h2 b, body.index body.skills .wrapper .title .anchor#home .container article h2 b, body.skills body.index .wrapper .anchor#home .container article h2 .title b, body.index body.skills .wrapper .anchor#home .container article h2 .title b {
-  font-size: 4em;
+  font-size: 4vw;
   color: #E2F4FF;
 }
 body.skills .wrapper .title h2 b, body.skills body.index .wrapper .title .anchor#home .container article h2 b b, body.index body.skills .wrapper .title .anchor#home .container article h2 b b, body.skills body.index .wrapper .anchor#home .container article h2 .title b b, body.index body.skills .wrapper .anchor#home .container article h2 .title b b {
@@ -898,135 +903,62 @@ body.skills .wrapper .title h2 b, body.skills body.index .wrapper .title .anchor
 }
 @media screen and (max-width: 800px) {
   body.skills .wrapper .title h2, body.skills body.index .wrapper .title .anchor#home .container article h2 b, body.index body.skills .wrapper .title .anchor#home .container article h2 b, body.skills body.index .wrapper .anchor#home .container article h2 .title b, body.index body.skills .wrapper .anchor#home .container article h2 .title b {
-    font-size: 5em;
+    font-size: 6vw;
   }
 }
-body.skills .wrapper .title h3 {
-  color: #E2F4FF;
-  font-size: 2em;
-}
-body.skills .container {
-  width: 80%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  margin-bottom: 100px;
-}
-@media screen and (max-width: 990px) {
-  body.skills .container {
-    grid-template-columns: 2fr 2fr;
-    grid-row-gap: 50px;
-    width: 90%;
-  }
-}
-@media screen and (max-width: 450px) {
-  body.skills .container {
-    grid-template-columns: 4fr;
-  }
-}
-body.skills .container .card {
-  position: relative;
+body.skills .wrapper > div {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-top: 3rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+}
+body.skills .wrapper > div .container {
+  display: flex;
   flex-direction: column;
-  height: 10em;
-}
-body.skills .container .card::before {
-  content: "";
-  height: 5em;
-  width: 3px;
-  background-color: #F2D592;
-  position: absolute;
-  left: 0;
-  top: 2.5em;
-  z-index: 5;
-}
-@media screen and (max-width: 450px) {
-  body.skills .container .card::after {
-    content: "";
-    position: absolute;
-    height: 3px;
-    width: 50%;
-    background-color: #F2D592;
-    bottom: -25px;
-    left: 25%;
-  }
-  body.skills .container .card:last-of-type::after {
-    display: none;
-  }
-}
-body.skills .container .card.title {
-  justify-content: flex-start;
-  align-items: flex-start;
-  grid-column: 1/5;
-  width: 100%;
-  height: 7em;
-  text-transform: uppercase;
-}
-body.skills .container .card.title::before {
-  display: none;
-}
-body.skills .container .card.title::after {
-  display: none;
 }
 @media screen and (max-width: 990px) {
-  body.skills .container .card.title {
-    grid-column: 1/3;
-  }
-}
-@media screen and (max-width: 450px) {
-  body.skills .container .card.title {
-    grid-column: 1/2;
-  }
-}
-body.skills .container .card.title h3 {
-  color: #F2D592;
-  width: 40%;
-  border-bottom: 4px solid #E2F4FF;
-  border-radius: 4px;
-}
-@media screen and (max-width: 990px) {
-  body.skills .container .card.title h3 {
-    width: 60%;
-  }
-}
-@media screen and (max-width: 650px) {
-  body.skills .container .card.title h3 {
+  body.skills .wrapper > div .container {
     width: 80%;
-    font-size: 2.5em;
   }
 }
-@media screen and (max-width: 450px) {
-  body.skills .container .card.title h3 {
-    width: 100%;
-    font-size: 2em;
-  }
+body.skills .wrapper > div .container h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #E2F4FF;
+  text-decoration: underline;
 }
-body.skills .container .card p {
-  text-transform: uppercase;
-  font-weight: bolder;
+body.skills .wrapper > div .container .content {
+  display: flex;
+  flex-direction: column;
+}
+body.skills .wrapper > div .container .content ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+body.skills .wrapper > div .container .content ul li {
+  font-size: 2rem;
+  font-weight: 700;
+  width: 100%;
+}
+body.skills .wrapper > div .container .content ul li span {
   color: #F2D592;
-  font-size: 2em;
-  text-align: center;
+  margin-right: 1rem;
+  font-weight: 600;
 }
-@media screen and (max-width: 450px) {
-  body.skills .container .card p {
-    font-size: 1.75em;
-  }
+body.skills .wrapper > div .container .content ul li a {
+  font-size: 2rem;
+  font-weight: 700;
+  width: 100%;
+  color: #141414;
+  text-decoration: underline;
 }
-body.skills .container .card:nth-of-type(2)::before {
-  display: none;
-}
-@media screen and (max-width: 990px) {
-  body.skills .container .card:nth-of-type(4)::before {
-    display: none;
-  }
-}
-@media screen and (max-width: 450px) {
-  body.skills .container .card:nth-of-type(3)::before, body.skills .container .card:nth-of-type(5)::before {
-    display: none;
-  }
+body.skills .wrapper > div .container .content ul li a:hover {
+  text-decoration: none;
 }
 
 body.proj-template {
